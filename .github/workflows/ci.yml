@@ -1,0 +1,49 @@
+name: CI & Reproducibility Audit
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify Code Syntax & Imports
+        run: |
+          python -m py_compile reproducibility_package/code/*.py
+          python -c "import reproducibility_package.code.common as c; print('common.py import ok')"
+
+      - name: Verify Stored Results Integrity
+        run: |
+          python -c "
+          import json, pandas as pd
+          audit = json.load(open('reproducibility_package/results/audit.json'))
+          assert audit['n_rows'] == 374, 'Row count mismatch'
+          assert audit['unique_rows'] == 132, 'Unique rows mismatch'
+          assert audit['predictor_vectors_with_conflicting_labels'] == 22, 'Conflicting label count mismatch'
+          print('Audit JSON verified successfully')
+
+          summary = pd.read_csv('reproducibility_package/results/summary_all_protocols.csv')
+          assert len(summary) >= 30, 'Summary table rows missing'
+          print('Summary CSV verified successfully')
+          "

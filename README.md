@@ -516,3 +516,4 @@ Or reference the citation metadata provided in [`CITATION.cff`](CITATION.cff).
 ## License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for complete terms and details.
+

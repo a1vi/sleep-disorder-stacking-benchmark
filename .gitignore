@@ -60,3 +60,4 @@ reproducibility_package/paper/*.synctex.gz
 data/*.csv
 reproducibility_package/data/*.csv
 !reproducibility_package/data/README.txt
+
