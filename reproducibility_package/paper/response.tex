@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\input{numbers.tex}
+\setlength{\parskip}{4pt}\setlist{leftmargin=*,itemsep=2pt}
+\newcommand{\rc}[1]{\par\smallskip\noindent\textbf{#1}\par}
+\newcommand{\ans}{\noindent\textit{Response.} }
+\begin{document}
+\begin{center}\Large\textbf{Response to Reviewers}\end{center}
+\noindent Manuscript NEURI-D-26-00299, \emph{Neuroscience Informatics}. The manuscript has been re-analysed and rewritten (new title: ``An Audited Evaluation of Explainable RF--XGBoost Stacking for Multiclass Sleep-Disorder Classification on a Small Public Benchmark''). Section, table and figure numbers refer to the revised manuscript.
+
+\section*{Summary of principal changes}
+\begin{itemize}
+\item \textbf{Outcome coding verified.} The \NNone{} ``no disorder'' records carry the literal label ``None''; the earlier ``missing'' description was a pandas import artefact (Section 3.1).
+\item \textbf{Duplicates audited.} \NDup{} exact duplicates (\NUnique{} unique rows, \NVec{} predictor vectors); \NConflictVec{} vectors with conflicting labels cap accuracy at \Ceiling\% (Section 3.2).
+\item \textbf{One model throughout.} All analyses evaluate the primary RF--XGB stack; the RF--XGB--SVM variant has been removed. The SVM is only an independent baseline.
+\item \textbf{New validation.} Repeated 10$\times$5-fold grouped CV, repeated nested CV with tuning confined to training partitions, unique-row sensitivity analysis, 13 learners including logistic regression and a shallow tree, paired tests, calibration (Sections 4--5).
+\item \textbf{Headline claim withdrawn.} The reported 97.33\% (73/75) could not be reproduced (we obtain \OrigStackCorrect/75), and \OrigLeak{} of 75 test records duplicate training records. Grouped CV gives \AccStackG\% for the stack, with no advantage over soft voting, its base learners or logistic regression.
+\item \textbf{Explanation audit.} SHAP stability over 10 independent runs, collinearity analysis, audited LIME with identifiers and fidelity.
+\item \textbf{Released:} code, software versions, seeds, split identifiers, observation-level predictions.
+\item \textbf{Condensed:} Table 1, the ANN comparison table, PCA, the ALE surface, ROC curves and the repeated clinical caveats were removed or merged.
+\end{itemize}
+
+\section*{Reviewer \#1}
+\rc{1. Verify outcome coding.}\ans Verified against the source CSV: the column contains exactly the strings \texttt{None} (\NNone), \texttt{Sleep Apnea} (\NApn) and \texttt{Insomnia} (\NIns), with no empty fields. The default pandas parser turns \texttt{None} into missing values, which produced the earlier description. The analysis is now run with \texttt{keep\_default\_na=False} and asserts the labels (Section 3.1; code \texttt{common.py}). No repetition of the analysis under a different coding was needed because the labels were not missing; the meaning of ``None'' is discussed as a limitation (Section 7).
+\rc{2. Reconcile model configurations.}\ans Done. Every analysis now uses the two-learner RF--XGB stack of Algorithm 1; the RF--XGB--SVM stack, the ablation figure and the seed-sweep figure are removed. All hyper-parameters are listed in Appendix A.
+\rc{3. Reproducibility.}\ans The supplementary archive contains executable code, software versions (Section 4.5), per-repeat seeds, split identifiers for every protocol, and a script that regenerates all tables and in-text numbers. Preprocessing (scaler, encoder vocabulary) is refitted inside every inner fold (Algorithm 1); outer test folds are never used for fitting or selection. Our re-implementation of the original single split gives \OrigStackCorrect/75 (not 73/75); we say so explicitly in Section 5.1 and withdraw the earlier figure.
+\rc{4. Strengthen validation and comparisons.}\ans Sections 4.2 and 5.2--5.4: repeated stratified-grouped 10$\times$5-fold CV and repeated nested CV (inner 3-fold selection on training partitions) compare stacking, soft voting, RF, XGBoost, logistic regression, a depth-3 tree, majority class and six further learners on identical splits, with variability, paired differences and corrected tests (Tables 2 and 4, Figs. 2 and 3). The stack is not distinguishable from soft voting (\DiffVoteG{} pp, 95\% CI \DiffLoVoteG{} to \DiffHiVoteG).
+\rc{5. Verify statistical results.}\ans Observation-level labels, predictions and probabilities for every model, repeat and fold are provided, together with the single-split output; McNemar tests and bootstrap intervals are computed from them. On the re-implemented single split the stack and soft voting both score \OrigStackCorrect/75 (paired CI \OrigBootLo{} to \OrigBootHi{} pp). Conclusions now consistently state that there is no evidence of superiority, and the discussion explains the limited power (Section 6).
+\rc{6. Explanation reporting.}\ans Table 8 reports Person ID, reference label, predicted probabilities, LIME surrogate $R^2$ and seed-to-seed rank stability. Explanation sampling is specified (25-record background from training; 35 explanation records from the test partition; $2p+1$ evaluations) and repeated over 10 independent runs (Table 7, Fig. 5): within-model rank correlation \ShapRhoStack{} (stack) and \ShapRhoVote{} (soft voting). The shaded bands of the old repeated-split figure no longer exist because the figure was removed; all intervals are now defined in Section 4.3.
+\rc{Methodological contribution.}\ans We no longer describe a ``proposed framework''. Section 6 states that stacking, SHAP and LIME are standard and that the contribution is a verified implementation, a quantified account of duplicate and single-split inflation, like-for-like comparisons with paired statistics and calibration, and an explanation audit.
+
+\section*{Reviewer \#2}
+\rc{1. Limited novelty.}\ans Agreed; see the response above. The title, abstract, introduction and discussion are reframed as an audit and evaluation rather than a new method.
+\rc{2. Clinical interpretation limited by data and outcome definition.}\ans The task is now described as classification of a recorded status, not risk stratification or decision support (title, keywords, Section 3, Section 6 ``Benchmark outcomes versus clinical screening'', Section 7).
+\rc{3. High performance on a small hold-out requires rigorous validation.}\ans Addressed by repeated grouped and nested CV with cluster-bootstrap intervals. The single-split figure is shown to be inflated by duplicates (Section 5.1); performance on unique rows is \AccStackD\% (Section 5.2).
+\rc{4. Explanation methods do not demonstrate mechanisms.}\ans Stated explicitly in Sections 4.4 and 6; PCA and ALE were removed, and the remaining analyses are framed as audits of fitted functions with stability and collinearity checks.
+\rc{5. Comparison with recent competitive tabular approaches.}\ans We added extra trees, HistGradientBoosting, LightGBM, CatBoost, an RBF SVM and an MLP, plus logistic regression and a shallow tree (Table 2, Fig. 2). Tabular foundation models and attention-based tabular networks could not be run because their pretrained weights were not accessible in our environment; this is stated as a limitation (Section 7).
+\rc{6. Presentation, formatting, figures, references.}\ans The manuscript was rewritten in a consistent structure. All equations were re-typeset; all figures and tables are regenerated programmatically from stored results (no AI-generated artwork). The reference list was rebuilt and unused entries removed.
+
+\section*{Reviewer \#3}
+\rc{1. Separate benchmark outcomes from clinical screening.}\ans Added a dedicated paragraph in Section 6.
+\rc{2. Expand interpretation of McNemar/bootstrap.}\ans Section 6 (``Statistical power''): two discordant records; minimum detectable difference about \OrigMDE{} points at 80\% power; about \NReq{} test records would be needed to detect a 1.33-point difference.
+\rc{3. Collinearity and attribution differences between architectures.}\ans Section 5.7: Spearman and variance-inflation factors; stack versus soft-voting attributions correlate weakly ($\rho=\ShapStackVote$), but total blood-pressure attribution is almost identical (\BlockBPStack{} versus \BlockBPVote) and joint permutation of the pair matters far more than either member alone.
+\rc{4. Repeated-split analysis used a different model.}\ans Removed; the repeated analyses now evaluate the primary RF--XGB stack (Section 5.2), and the manuscript states this in the protocol description.
+\rc{5. Labelling note in limitations.}\ans Added (Section 7, item ii), including the possible bias towards under-detection.
+\rc{6. Local explanation reporting.}\ans Table 8 reports the identifiers, labels, probabilities and fidelity, and Section 8 lists the information future local-explanation figures should report.
+\rc{7. Future work.}\ans Section 8 recommends repeated CV, calibration assessment and external clinical validation. The first two are also performed here (Sections 5.2--5.5).
+\rc{8. Suggested references.}\ans We read the three suggested works. They concern traffic-flow forecasting, image semantic segmentation and remote-sensing object detection; we could not identify a claim in the revised manuscript that they would support, so we have not cited them, and we are glad to add them if the editor considers them relevant. We expanded the reference list with works directly relevant to evaluation, calibration, tabular benchmarks and explanation.
+
+\section*{Reviewer \#4}
+\rc{Major 1. Provenance, synthetic data, ``None'' coding.}\ans Coding verified (see R1.1). Provenance: no collection protocol is documented and the duplicate structure suggests templated generation; the manuscript now says so and treats the data as a methodological benchmark (Section 3.1).
+\rc{Major 2. ``Supplied'' results, no code.}\ans All results are now generated by the released code; the word ``supplied'' no longer appears, and code, split indices and predictions are provided.
+\rc{Major 3. Duplicates and tuning.}\ans Duplicates are reported (\NDup) and handled by grouped splitting; unique-row results are given. The original settings were fixed values of unverifiable provenance, so we repeat the evaluation with nested tuning (Section 5.4). Results are unchanged in substance.
+\rc{Major 4. Repeated nested CV, CIs, calibration, baselines.}\ans Done (Sections 5.2--5.5); logistic regression and a depth-3 tree are included. Logistic regression reaches \AccLRG\% against \AccStackG\% for the stack.
+\rc{Major 5. Align explanation analyses; SHAP stability.}\ans Seed/ablation analyses and Fig.\ 9a were removed. SHAP and LIME are reported for both the stack and the soft-voting model with explicit model labels, and SHAP stability was assessed over 10 independent backgrounds and samples; collinearity is analysed (Section 5.7).
+\rc{Minor 1. ``Risk stratification'', circularity.}\ans Terminology changed throughout. Section 5.6 shows that removing sleep duration and quality (and stress) leaves accuracy essentially unchanged.
+\rc{Minor 2. Novelty/``proposed framework''.}\ans Softened; see Section 6.
+\rc{Minor 3. Table 6 (ANN accuracies on a different split).}\ans Removed.
+\rc{Minor 4. Fig.\ 8 index/probability; Fig.\ 11 bands; train/test accuracy of 0.926/0.924.}\ans Local explanations are now audited (Table 8); Fig.\ 11 was removed. The closeness of training and test accuracy is explained by the accuracy ceiling (in-sample accuracy on all records is \TrainAccRF\% for RF against the \Ceiling\% ceiling) and by duplicated rows spanning the split (Section 5.1).
+\rc{Minor 5. ALE grid.}\ans The ALE panel was removed.
+\rc{Minor 6. Condense Related Work/Table 1/repeated caveats.}\ans Related Work is now one short section; Table 1 was removed; the clinical caveat is stated once in Discussion and once in Limitations.
+
+\section*{Reviewer \#5}
+\rc{1. 219 blank outcomes.}\ans See R1.1. The exact import, cleaning and recoding code is provided (\texttt{common.py}, function \texttt{load}).
+\rc{2. 97.33\% on 75 observations.}\ans The figure could not be reproduced and is withdrawn (Section 5.1); repeated CV replaces it (Sections 5.2--5.4). The perfect per-class results of the single split are no longer reported.
+\rc{3. Code, versions, seeds.}\ans Provided (Section 4.5 and archive).
+\rc{4. Inconsistent model in ablation/repeated analysis.}\ans Resolved (see R1.2).
+\end{document}

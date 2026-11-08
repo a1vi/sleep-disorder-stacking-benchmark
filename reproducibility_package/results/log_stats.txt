@@ -1,0 +1,131 @@
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+/home/claude/revision/code/stats_calib.py:45: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  pm = pr[pr.model == m].copy(); pm["c"] = (pm.pred == pm.y).astype(int); rowacc = pm.pivot(index="row", columns="repeat", values="c").sort_index().mean(1).values
+   protocol             model    acc  acc_lo  acc_hi  macro_f1  brier  logloss    auc   ece5
+0   grouped          Majority  0.586   0.586   0.586     0.246  0.571    0.966  0.500  0.006
+1   grouped            LogReg  0.897   0.895   0.899     0.872  0.188    0.435  0.917  0.063
+2   grouped         Tree(d=3)  0.881   0.878   0.884     0.848  0.209    0.775  0.903  0.044
+3   grouped                RF  0.898   0.894   0.902     0.866  0.191    1.119  0.925  0.079
+4   grouped               XGB  0.898   0.893   0.904     0.866  0.185    0.431  0.915  0.055
+5   grouped  SoftVote(RF+XGB)  0.898   0.894   0.903     0.866  0.184    0.447  0.920  0.060
+6   grouped     Stack(RF+XGB)  0.896   0.892   0.900     0.868  0.186    0.446  0.912  0.062
+7   grouped        ExtraTrees  0.887   0.879   0.895     0.855  0.207    1.337  0.922  0.075
+8   grouped            HistGB  0.890   0.881   0.899     0.855  0.207    0.678  0.912  0.080
+9   grouped          LightGBM  0.895   0.887   0.903     0.861  0.204    0.648  0.913  0.088
+10  grouped          CatBoost  0.898   0.894   0.902     0.866  0.180    0.397  0.921  0.045
+11  grouped               MLP  0.897   0.892   0.901     0.870  0.188    0.509  0.914  0.061
+12  grouped          SVM(rbf)  0.900   0.894   0.906     0.870  0.172    0.369  0.932  0.027
+13    dedup          Majority  0.553   0.553   0.553     0.237  0.594    0.998  0.500  0.014
+14    dedup            LogReg  0.741   0.728   0.754     0.685  0.435    0.838  0.783  0.121
+15    dedup         Tree(d=3)  0.701   0.684   0.718     0.636  0.488    2.904  0.776  0.145
+16    dedup                RF  0.734   0.722   0.745     0.663  0.482    1.885  0.751  0.149
+17    dedup               XGB  0.709   0.692   0.727     0.640  0.486    0.941  0.753  0.145
+18    dedup  SoftVote(RF+XGB)  0.722   0.710   0.735     0.653  0.478    0.977  0.748  0.148
+19    dedup     Stack(RF+XGB)  0.730   0.713   0.748     0.671  0.452    0.900  0.773  0.126
+20    dedup        ExtraTrees  0.564   0.548   0.581     0.481  0.808    9.056  0.573  0.329
+21    dedup            HistGB  0.696   0.687   0.705     0.626  0.515    1.126  0.743  0.164
+22    dedup          LightGBM  0.595   0.582   0.608     0.516  0.726    1.837  0.693  0.317
+23    dedup          CatBoost  0.737   0.727   0.747     0.667  0.460    0.862  0.762  0.156
+24    dedup               MLP  0.573   0.539   0.606     0.516  0.723    3.316  0.686  0.307
+25    dedup          SVM(rbf)  0.751   0.743   0.759     0.684  0.405    0.740  0.802  0.084
+26    naive          Majority  0.586   0.586   0.586     0.246  0.571    0.966  0.500  0.000
+27    naive            LogReg  0.910   0.907   0.913     0.888  0.166    0.390  0.926  0.055
+28    naive         Tree(d=3)  0.891   0.887   0.896     0.861  0.195    0.780  0.908  0.042
+29    naive                RF  0.911   0.906   0.915     0.885  0.181    1.273  0.925  0.090
+30    naive               XGB  0.913   0.911   0.915     0.888  0.167    0.406  0.919  0.055
+31    naive  SoftVote(RF+XGB)  0.913   0.911   0.916     0.889  0.170    0.435  0.921  0.069
+32    naive     Stack(RF+XGB)  0.918   0.914   0.921     0.897  0.158    0.388  0.925  0.058
+   protocol        comparator  mean_acc_diff_pp  boot_lo_pp  boot_hi_pp   nb_p  mcnemar_p_median  repeats_p_lt_05  discordant_stack_only_mean  discordant_comp_only_mean
+0   grouped          Majority            31.043      20.737      41.753  0.000             0.000               10                       128.7                       12.6
+1   grouped            LogReg            -0.107      -1.241       0.858  0.977             1.000                0                         2.8                        3.2
+2   grouped         Tree(d=3)             1.497       0.361       2.965  0.734             0.180                1                         9.3                        3.7
+3   grouped                RF            -0.187      -1.648       1.186  0.966             0.895                0                         4.5                        5.2
+4   grouped               XGB            -0.241      -1.800       1.176  0.955             0.772                1                         4.4                        5.3
+5   grouped  SoftVote(RF+XGB)            -0.241      -1.751       1.137  0.954             0.678                0                         4.2                        5.1
+6   grouped        ExtraTrees             0.909      -0.158       2.214  0.852             0.528                2                         6.6                        3.2
+7   grouped            HistGB             0.588      -1.163       2.264  0.929             0.238                1                         8.3                        6.1
+8   grouped          LightGBM             0.107      -1.371       1.395  0.987             0.316                0                         6.5                        6.1
+9   grouped          CatBoost            -0.214      -1.566       1.051  0.960             0.676                0                         4.3                        5.1
+10  grouped               MLP            -0.080      -0.853       0.655  0.984             0.480                0                         3.8                        4.1
+11  grouped          SVM(rbf)            -0.428      -1.983       0.846  0.930             0.587                1                         3.5                        5.1
+12    dedup          Majority            17.727      10.682      25.224  0.315             0.001               10                        34.4                       11.0
+13    dedup            LogReg            -1.061      -2.290       0.149  0.921             1.000                1                         2.0                        3.4
+14    dedup         Tree(d=3)             2.955      -0.169       6.250  0.877             0.398                2                         9.4                        5.5
+15    dedup                RF            -0.303      -3.280       2.609  0.981             0.544                0                         5.4                        5.8
+16    dedup               XGB             2.121      -1.846       6.061  0.896             0.325                0                         8.6                        5.8
+17    dedup  SoftVote(RF+XGB)             0.833      -2.769       4.478  0.955             0.424                0                         6.7                        5.6
+18    dedup        ExtraTrees            16.667      11.755      21.240  0.448             0.000               10                        26.1                        4.1
+19    dedup            HistGB             3.485      -0.317       7.388  0.826             0.468                1                        10.1                        5.5
+20    dedup          LightGBM            13.636       8.468      18.561  0.532             0.001                9                        23.6                        5.6
+21    dedup          CatBoost            -0.682      -3.588       2.190  0.959             1.000                0                         4.6                        5.5
+22    dedup               MLP            15.833      11.985      19.549  0.509             0.000               10                        24.1                        3.2
+23    dedup          SVM(rbf)            -2.045      -4.769       0.657  0.850             0.754                2                         2.9                        5.6
+24    naive          Majority            33.209      23.018      43.696  0.000             0.000               10                       133.7                        9.5
+25    naive            LogReg             0.749      -0.433       2.263  0.817             0.598                1                         5.0                        2.2
+26    naive         Tree(d=3)             2.647       1.074       4.708  0.553             0.005                6                        12.0                        2.1
+27    naive                RF             0.695      -0.054       1.637  0.847             0.625                1                         4.4                        1.8
+28    naive               XGB             0.508      -0.246       1.417  0.873             0.438                0                         3.5                        1.6
+29    naive  SoftVote(RF+XGB)             0.428      -0.342       1.342  0.897             0.656                0                         3.4                        1.8

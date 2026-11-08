@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDEs & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# LaTeX compilation intermediates (keep final PDFs, ignore aux/log/out/etc.)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+reproducibility_package/paper/*.aux
+reproducibility_package/paper/*.log
+reproducibility_package/paper/*.out
+reproducibility_package/paper/*.synctex.gz
+
+# Data files (Kaggle dataset must be downloaded separately per licence)
+data/*.csv
+reproducibility_package/data/*.csv
+!reproducibility_package/data/README.txt
