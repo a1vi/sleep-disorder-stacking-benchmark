@@ -430,7 +430,7 @@ Evaluating performance when all 242 duplicate entries are completely removed:
 Clone this repository and create a virtual environment:
 
 ```bash
-git clone https://github.com/atair-alvi/sleep-disorder-stacking-benchmark.git
+git clone https://github.com/a1vi/sleep-disorder-stacking-benchmark.git
 cd sleep-disorder-stacking-benchmark
 
 # Option A: Using Conda (Recommended)

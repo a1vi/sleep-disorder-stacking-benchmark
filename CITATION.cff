@@ -28,6 +28,6 @@ keywords:
   - "clinical decision support"
   - "leakage audit"
   - "reproducibility"
-repository-code: "https://github.com/atair-alvi/sleep-disorder-stacking-benchmark"
+repository-code: "https://github.com/a1vi/sleep-disorder-stacking-benchmark"
 license: "MIT"
 
